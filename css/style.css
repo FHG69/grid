@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 html, body{
     width: 100%;
     height: 100%;
@@ -6,14 +8,14 @@ html, body{
     background-color: black;
 }
 
-.content{background-color: black;}
+
 
 .gridwrapper {
-   margin :10px;
   
+   
     display: grid;
-    grid-template-columns: 9vw 9vw 81vw ;
-    grid-template-rows: repeat(11, 9vh);
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     grid-gap: 10px;
 }
 .box {
@@ -22,7 +24,12 @@ html, body{
     border:1px solid white;
     border-radius: 5px;
     padding: 20px;
-    font-size: 150%;}
+    font-size: 150%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    vertical-align: middle;
+}
+
 [class*=" a"]{grid-column: 1; user-select: none;}
 .a1{grid-row: 1;}
 .a2{grid-row: 2;}
@@ -36,20 +43,21 @@ html, body{
 .b3{grid-row: 3;}
 .b4{grid-row: 4;}
 .b5{grid-row: 5;}
-
-
 #a1{
-    grid-column: 3;
-    grid-row: 1/ 6;
-    display: block;
+   display: block;
 }
-#a2, #a3, #a4, #a5{
-    grid-column: 3;
-    grid-row: 1/ 6;
+#a2, #a3, #a4, #a5, #b1, #b2, #b3, #b4, #b5{
+   
     display: none;
 }
-#b1, #b2, #b3, #b4, #b5{
-    grid-column: 3;
-    grid-row: 1/ 6;
-    display: none;
+.content{
+    background-color: black;
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+    padding: 0%;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
